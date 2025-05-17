@@ -1,0 +1,244 @@
+/* static/css/custom.css - Theme inspired by CustomerInsights.ai Logo Colors */
+:root {
+    /* --- LOGO-BASED COLOR PALETTE --- */
+    --logo-blue: #0064A7;         /* YOUR SPECIFIED BLUE */
+    --logo-yellow: #F69522;       /* YOUR SPECIFIED ORANGE/YELLOW */
+    --logo-black: #212529;        
+    --theme-white: #FFFFFF;
+    --theme-light-grey: #f4f7fc;  
+    --theme-medium-grey: #e4e6ef; 
+    --theme-dark-grey-text: #495057; 
+
+    /* Semantic mapping using logo colors */
+    --primary-bg: var(--theme-light-grey);
+    --sidebar-bg: var(--logo-blue); /* Sidebar main background is blue */
+    --sidebar-text: var(--theme-white);
+    --sidebar-brand-text: var(--logo-black); /* Text color for brand if on white bg */
+    --sidebar-hover-bg: #004b8A; /* Darker shade of your new blue for hover */
+    --sidebar-active-bg: var(--logo-yellow);
+    --sidebar-active-text: var(--logo-black); 
+    
+    --accent-primary: var(--logo-yellow); 
+    --accent-primary-darker: #d87e15; /* Darker shade of #F69522 */
+    
+    --text-color: var(--theme-dark-grey-text);
+    --heading-color: var(--logo-blue); 
+    
+    --card-bg: var(--theme-white);
+    --card-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+    --card-border-radius: 8px;
+    --border-color: var(--theme-medium-grey);
+    
+    --font-family-sans-serif: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    
+    --button-primary-bg: var(--accent-primary);
+    --button-primary-text: var(--logo-black); 
+    --button-primary-hover-bg: var(--accent-primary-darker);
+
+    --link-color: var(--logo-blue); 
+    --link-hover-color: #004b8A; 
+
+    --bs-success: #599359; 
+    --bs-danger: #dc3545;
+    --bs-warning: #ffc107; 
+    --bs-info: var(--logo-blue); /* Use logo blue for info alerts */
+}
+
+body {
+    font-family: var(--font-family-sans-serif);
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.page-wrapper { display: flex; min-height: 100vh; }
+
+/* Sidebar Styles */
+.sidebar {
+    width: 260px;
+    background-color: var(--sidebar-bg); /* Fallback for sections if not overridden */
+    color: var(--sidebar-text);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    box-shadow: 3px 0 15px rgba(0,0,0,0.1);
+    z-index: 1030;
+    transition: width 0.3s ease;
+}
+
+.sidebar-header {
+    padding: 0.75rem 1rem; 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    height: 70px; 
+    background-color: var(--theme-white); /* White background for the logo area */
+    border-bottom: 1px solid var(--border-color); 
+}
+
+.sidebar-brand-logo #app-logo {
+    height: 45px; 
+    width: auto;
+    display: block;
+    filter: none; 
+}
+
+.sidebar-nav { 
+    flex-grow: 1;
+    padding-top: 1rem;
+    overflow-y: auto;
+    background-color: var(--sidebar-bg); /* Explicitly ensure this part is blue */
+}
+.sidebar-nav ul { list-style: none; padding: 0; margin: 0; }
+.sidebar-nav li a {
+    display: flex; align-items: center; padding: 0.9rem 1.5rem;
+    color: var(--sidebar-text); text-decoration: none; font-size: 0.95rem;
+    font-weight: 500; transition: background-color 0.2s ease, color 0.2s ease, border-left-color 0.2s ease;
+    border-left: 4px solid transparent; white-space: nowrap;
+}
+.sidebar-nav li a:hover {
+    background-color: var(--sidebar-hover-bg); color: #fff;
+    border-left-color: var(--accent-primary);
+}
+.sidebar-nav li a.active {
+    background-color: var(--sidebar-active-bg); color: var(--sidebar-active-text);
+    font-weight: 600; border-left-color: var(--sidebar-active-text); 
+}
+.sidebar-nav li a.active i { color: var(--sidebar-active-text); }
+.sidebar-nav li a i.fa-fw {
+    margin-right: 15px; font-size: 1.1em; width: 22px;
+    text-align: center; color: inherit; transition: color 0.2s ease;
+}
+
+.sidebar-divider { border-top: 1px solid var(--sidebar-hover-bg); }
+
+.sidebar-footer {
+    padding: 1rem 1.5rem; 
+    border-top: 1px solid var(--sidebar-hover-bg); 
+    height: 60px; 
+    display: flex; 
+    align-items: center;
+    background-color: var(--sidebar-bg); /* Ensure footer is also blue */
+}
+.user-profile { 
+    display: flex; 
+    align-items: center; 
+    color: var(--sidebar-text); 
+    font-size: 0.9rem; 
+    white-space: nowrap; 
+}
+.user-profile i { 
+    color: var(--accent-primary); 
+    font-size: 1.5rem; 
+}
+.user-profile span { font-weight: 500; }
+
+/* Main Content Styles */
+.main-content {
+    margin-left: 260px; flex-grow: 1; padding: 0; 
+    background-color: var(--primary-bg); display: flex; flex-direction: column;
+    min-height: 100vh; transition: margin-left 0.3s ease;
+}
+.main-content .container-fluid { padding: 1.5rem; flex-grow: 1; }
+.page-header {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 1.5rem; padding-top: 0.5rem;
+}
+.page-title { color: var(--heading-color); font-weight: 600; font-size: 1.75rem; margin-bottom: 0; }
+
+/* Card Styles */
+.card {
+    border: 1px solid var(--border-color); box-shadow: var(--card-shadow);
+    border-radius: var(--card-border-radius); margin-bottom: 1.75rem; 
+    background-color: var(--card-bg);
+}
+.card-header {
+    background-color: #f8f9fc; border-bottom: 1px solid var(--border-color);
+    padding: 1rem 1.5rem; color: var(--heading-color);
+    border-top-left-radius: var(--card-border-radius); border-top-right-radius: var(--card-border-radius);
+}
+.card-header h5 { margin-bottom: 0; font-size: 1.1rem; font-weight: 600; }
+.card-body { padding: 1.5rem; }
+.card-title { color: var(--heading-color); font-weight: 600; font-size: 1.25rem; }
+
+/* Button Styles */
+.btn {
+    border-radius: 6px; padding: 0.5rem 1rem; font-weight: 500;
+    font-size: 0.9rem; transition: all 0.2s ease-in-out;
+    border: 1px solid transparent; display: inline-flex;
+    align-items: center; justify-content: center;
+}
+.btn i.fas, .btn i.far { margin-right: 0.5em; }
+.btn-primary {
+    background-color: var(--button-primary-bg); border-color: var(--button-primary-bg);
+    color: var(--button-primary-text);
+}
+.btn-primary:hover, .btn-primary:focus {
+    background-color: var(--button-primary-hover-bg); border-color: var(--button-primary-hover-bg);
+    color: var(--button-primary-text); box-shadow: 0 4px 10px rgba(246, 149, 34, 0.3);
+}
+.btn-secondary {
+    background-color: var(--logo-blue); border-color: var(--logo-blue);
+    color: var(--theme-white);
+}
+.btn-secondary:hover { background-color: var(--sidebar-hover-bg); border-color: var(--sidebar-hover-bg); }
+.btn-outline-primary { color: var(--accent-primary); border-color: var(--accent-primary); }
+.btn-outline-primary:hover { background-color: var(--accent-primary); color: var(--button-primary-text); }
+.btn-outline-danger { color: var(--bs-danger); border-color: var(--bs-danger); }
+.btn-outline-danger:hover { background-color: var(--bs-danger); color: #fff; }
+
+/* Form Elements */
+.form-control, .form-select {
+    border-radius: 6px; border: 1px solid var(--border-color);
+    padding: 0.6rem 0.9rem; font-size: 0.9rem; 
+    transition: border-color 0.2s ease, box-shadow 0.2s ease; background-color: var(--theme-white);
+}
+.form-control:focus, .form-select:focus {
+    border-color: var(--accent-primary); box-shadow: 0 0 0 0.2rem rgba(246, 149, 34, 0.25); 
+}
+.form-label { font-weight: 500; margin-bottom: 0.5rem; color: var(--heading-color); font-size: 0.85rem; }
+.form-select-sm { padding-top: 0.4rem; padding-bottom: 0.4rem; font-size: 0.8rem; }
+
+/* Alert Styles */
+.alert {
+    border-radius: var(--card-border-radius); padding: 1rem 1.25rem;
+    border-width: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    color: var(--theme-white); 
+}
+.alert-success { background-color: var(--bs-success); }
+.alert-danger { background-color: var(--bs-danger); }
+.alert-warning { background-color: var(--logo-yellow); color: var(--logo-black); } 
+.alert-info { background-color: var(--bs-info); } /* Uses new --bs-info which is --logo-blue */
+
+/* Table Styles */
+.table thead th {
+    background-color: #eef2f7; border-bottom: 2px solid var(--border-color);
+    font-weight: 600; color: var(--heading-color); font-size: 0.85rem; 
+    padding: 0.9rem 1rem; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap;
+}
+.table td, .table th { border-top: 1px solid var(--border-color); vertical-align: middle; padding: 0.9rem 1rem; }
+.table-hover tbody tr:hover { background-color: #fdfdfe; } 
+.table a { color: var(--link-color); text-decoration: none; font-weight: 500; }
+.table a:hover { color: var(--link-hover-color); }
+.table .badge { font-size: 0.75rem; padding: 0.35em 0.65em; font-weight: 600; }
+.table .text-truncate { display: inline-block; }
+
+/* Footer */
+.app-footer {
+    text-align: center; padding: 1.5rem 0; background-color: var(--card-bg); 
+    border-top: 1px solid var(--border-color); color: #6c757d; 
+    font-size: 0.85rem; margin-top: auto; 
+}
+
+/* Link styles */
+a { color: var(--link-color); text-decoration: none; }
+a:hover { color: var(--link-hover-color); }
+
+/* Utility */
+.opacity-50 { opacity: 0.5; }
+.fw-medium { font-weight: 500 !important; }
