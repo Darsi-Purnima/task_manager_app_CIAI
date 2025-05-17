@@ -145,6 +145,31 @@ To set up and run the TaskMaster application on your local development environme
     * Modify or remove existing tasks using the "Edit" (pencil icon) and "Delete" (trash icon) actions available for each task. Deletion operations require user confirmation.
 6.  Terminate your session by selecting "**Logout**" from the sidebar.
 
+## Screenshots
+
+Here's a glimpse of TaskMaster in action:
+
+**Login Page:**
+![Login Page](output%20images/login_page.png)
+
+**Register Page:**
+![Register Page](output%20images/register_page.png)
+
+**Dashboard (Empty):**
+![Empty Dashboard View](output%20images/DashBoard.png)
+
+**Add/Edit Task Page:**
+![Add/Edit Task Page](output%20images/task_adding_edit_page.png)
+
+**Task Added to Dashboard:**
+![Dashboard after a task is added](output%20images/task_added.png)
+
+**Task Marked as Completed:**
+![Dashboard showing a completed task](output%20images/task_completed.png)
+
+**Logged Out Confirmation:**
+![Logged out state / Login page after logout](output%20images/logged_out.png)
+
 ## Design Considerations and Future Enhancements
 
 ### Design Philosophy:
