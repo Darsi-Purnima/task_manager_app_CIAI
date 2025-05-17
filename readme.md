@@ -1,8 +1,8 @@
 # Web-Based Task Management Application
 
-Welcome to TaskMaster, a web application developed to facilitate efficient task tracking and management. This project was undertaken as part of an assignment for [CustomerInsights.ai](https://www.customerinsights.ai/). Built using Python and the Flask framework, this application aims to provide a functional and user-friendly experience.
+Welcome to TaskManager, a web application developed to facilitate efficient task tracking and management. This project was undertaken as part of an assignment for [CustomerInsights.ai](https://www.customerinsights.ai/). Built using Python and the Flask framework, this application aims to provide a functional and user-friendly experience.
 
-TaskMaster enables users to register for an account, log in, and subsequently manage their tasks through creation, viewing, modification, and deletion. The dashboard serves as a centralized interface for all task-related activities, incorporating features for filtering and sorting.
+TaskManager enables users to register for an account, log in, and subsequently manage their tasks through creation, viewing, modification, and deletion. The dashboard serves as a centralized interface for all task-related activities, incorporating features for filtering and sorting.
 
 ## Core Features
 
@@ -51,7 +51,7 @@ The application's file and directory organization is as follows:
 
 ## Setup and Installation Guide
 
-To set up and run the TaskMaster application on your local development environment, please follow these instructions:
+To set up and run the TaskManager application on your local development environment, please follow these instructions:
 
 ### Prerequisites
 
@@ -147,7 +147,7 @@ To set up and run the TaskMaster application on your local development environme
 
 ## Screenshots
 
-Here's a glimpse of TaskMaster in action:
+Here's a glimpse of TaskManager in action:
 
 **Login Page:**
 ![Login Page](output%20images/login_page.png)
@@ -198,7 +198,7 @@ Here's a glimpse of TaskMaster in action:
 
 ---
 
-Thank you for reviewing TaskMaster.
+Thank you for reviewing TaskManager.
 
 Sincerely,
 
