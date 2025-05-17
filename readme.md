@@ -1,4 +1,4 @@
-# TaskMaster: Web-Based Task Management Application
+# Web-Based Task Management Application
 
 Welcome to TaskMaster, a web application developed to facilitate efficient task tracking and management. This project was undertaken as part of an assignment for [CustomerInsights.ai](https://www.customerinsights.ai/). Built using Python and the Flask framework, this application aims to provide a functional and user-friendly experience.
 
